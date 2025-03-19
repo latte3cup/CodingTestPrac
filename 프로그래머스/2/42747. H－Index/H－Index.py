@@ -1,7 +1,9 @@
 def solution(citations):
-    citations.sort(reverse=True)  # 큰 숫자부터 정렬
-    for i, citation in enumerate(citations):
-        if citation >= i + 1:
-            continue
-        return i  # 조건을 만족하지 않는 순간 이전 값을 반환
-    return len(citations)  # 모든 논문이 조건을 만족하면 전체 개수 반환
+    citations.sort()
+    ans = 0
+    l = len(citations)
+    for i in range(l):
+        citi = len([x for x in citations if x>=i+1])  #num 이상으로 인용된 갯수 
+        if citi >= i+1 and l-citi <= i+1:
+            ans = max(i+1,ans)
+    return ans
