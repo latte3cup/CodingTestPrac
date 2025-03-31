@@ -4,6 +4,5 @@ def solution(brown, yellow):
         if s%i !=0: continue
         elif (i-2)*((s//i) -2) == yellow:
             return sorted([i,(s//i)], reverse=True)
-        print(f"{i}//{s//i}")
-    
-    return 1
+        
+    return
