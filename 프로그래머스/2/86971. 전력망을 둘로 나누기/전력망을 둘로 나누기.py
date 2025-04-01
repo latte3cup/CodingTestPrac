@@ -27,12 +27,8 @@ def solution(n, wires):
         for a, b in new_wires:
             graph[a].append(b)
             graph[b].append(a)
-
         visited = [False] * (n + 1)
         size = bfs(1, graph, visited)  # 하나의 컴포넌트 크기
-        other_size = n - size
-        diff = abs(size - other_size)
-
-        min_diff = min(min_diff, diff)
+        min_diff = min(min_diff, abs(size - (n - size)))
 
     return min_diff
