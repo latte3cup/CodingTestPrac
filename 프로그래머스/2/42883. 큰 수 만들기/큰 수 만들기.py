@@ -26,12 +26,6 @@ def solution(number,k):
             k-=1
             continue
             
-        
-            
-
-        
-        
-        
     for i in range(cur,len(number)):
         stack.append(number[i])
     
