@@ -11,7 +11,7 @@ def solution(m, n, puddles):
                 continue
                 
                 
-            if y >0:
+            if y>0:
                 dp[y][x] = dp[y][x] + dp[y-1][x]
             if x>0:
                 dp[y][x] = dp[y][x] + dp[y][x-1]
