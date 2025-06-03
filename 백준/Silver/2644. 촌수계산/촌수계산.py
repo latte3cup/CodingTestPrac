@@ -1,4 +1,3 @@
-# 입력값 받는 부분
 N = int(input())
 A, B = map(int, input().split())
 M = int(input())
@@ -7,7 +6,6 @@ visited = [False] * (N+1)
 result = []
 ####
 
-# 어떤 노드들이 연결되어 있는지 graph라는 2차원 배열에 저장
 for _ in range(M):
   x, y = map(int, input().split())  
   graph[x].append(y)
